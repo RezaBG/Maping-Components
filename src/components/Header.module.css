@@ -24,16 +24,16 @@
 .header a {
   text-decoration: none;
   color: white;
-  font-size: 1.25 rem;
+  font-size: 1.25rem;
 }
 
 .header a:hover,
 .header a:active {
-  color: #b864ba;
+  color: #b864da;
 }
 
 .header button {
-  font-size: 1 25rem;
+  font-size: 1.25rem;
   background-color: #ffbb00;
   border: 1px solid #ffbb00;
   padding: 0.5rem 1.5rem;
@@ -43,6 +43,6 @@
 
 .header button:hover,
 .header button:active {
-  background-color: #ffbb00;
-  border-color: #ffbb00;
+  background-color: #ffa600;
+  border-color: #ffa600;
 }

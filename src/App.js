@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { UseSelector, useSelector } from "react-redux/es/hooks/useSelector";
+import { useSelector } from "react-redux";
 
 import Counter from "./components/Counter";
 import Header from "./components/Header";
@@ -13,8 +13,8 @@ function App() {
     <Fragment>
       <Header />
       {!isAuth && <Auth />}
-      {!isAuth && <UserProfile />}
-      <Counter />;
+      {isAuth && <UserProfile />}
+      <Counter />
     </Fragment>
   );
 }
