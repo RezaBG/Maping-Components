@@ -13,7 +13,7 @@ const Counter = () => {
   };
 
   const increaseHandler = () => {
-    dispatch(counterActions.increase());
+    dispatch(counterActions.increase(10)); // { type: SOME_UNIQUE_IDENTIFIER, payload: 10 }
   };
 
   const decrementHandler = () => {
@@ -30,7 +30,7 @@ const Counter = () => {
       {show && <div className={classes.value}>{counter}</div>}
       <div>
         <button onClick={incrementHandler}>Increment</button>
-        <button onClick={increaseHandler}>Increment by 10</button>
+        <button onClick={increaseHandler}>Increase by 10</button>
         <button onClick={decrementHandler}>Decrement</button>
       </div>
       <button onClick={toggleCounterHandler}>Toggle Counter</button>
@@ -55,7 +55,7 @@ export default Counter;
 //     return (
 //       <main className={classes.counter}>
 //         <h1>Redux Counter</h1>
-//         <div className={classes.value}>{this.counter.counter}</div>
+//         <div className={classes.value}>{this.props.counter}</div>
 //         <div>
 //           <button onClick={this.incrementHandler.bind(this)}>Increment</button>
 //           <button onClick={this.decrementHandler.bind(this)}>Decrement</button>
@@ -66,17 +66,17 @@ export default Counter;
 //   }
 // }
 
-// const mapStateToProps = (state) => {
+// const mapStateToProps = state => {
 //   return {
-//     counter: state.counter,
+//     counter: state.counter
 //   };
-// };
+// }
 
-// const mapDispatchToProps = (dispatch) => {
+// const mapDispatchToProps = dispatch => {
 //   return {
-//     increment: () => dispatch({ type: "increment" }),
-//     decrement: () => dispatch({ type: "decrement" }),
-//   };
+//     increment: () => dispatch({ type: 'increment' }),
+//     decrement: () => dispatch({ type: 'decrement' }),
+//   }
 // };
 
 // export default connect(mapStateToProps, mapDispatchToProps)(Counter);
